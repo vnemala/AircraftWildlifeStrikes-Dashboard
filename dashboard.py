@@ -1,10 +1,13 @@
 import dash
 from dash import dcc, html, Input, Output
 import pandas as pd
+import pyarrow.parquet as pq
 import plotly.express as px
 
 # Load the df dataset
-df = pd.read_csv("assets/database.csv")
+table = pq.read_table('assets/database.parquet')
+# Convert Parquet table to pandas DataFrame
+df = table.to_pandas()
 
 
 # Get the categorical columns
