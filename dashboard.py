@@ -32,6 +32,7 @@ radio=html.Div(className="options_div_2",children=[html.Div("Aircraft Damage:", 
 dropdown=html.Div(className="options_div_3",children=[html.Div("Aircraft Operator:", className="title"), dcc.Dropdown(id='operator-dropdown',options=operators_list, value=df['Operator'][0])], style=dict(width="100%"))
 
 app = dash.Dash(__name__)
+server = app.server
 
 app.layout = html.Div(className="parent", children=[
     html.Div("Aircraft Wildlife Strikes, 1990-2015", className="dash_title"),
