@@ -2,3 +2,4 @@ pandas
 dash
 pyarrow
 plotly
+gunicorn==19.7.1
